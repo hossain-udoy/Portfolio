@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { Link } from "react-scroll";
@@ -15,33 +16,29 @@ const navbar = () => {
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
             <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
-                Home
-              </Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="services" spy={true} smooth={true}>
+              <Link to="services" activeClass="active" spy={true} smooth={true}>
                 Serivces
               </Link>
             </li>
             <li>
-              <Link to="works" spy={true} smooth={true}>
-                Resume
+              <Link to="projects" activeClass="active" spy={true} smooth={true}>
+                Projects
               </Link>
             </li>
             <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                Protfolio
-              </Link>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
             <li>
-              <Link to="testimonial" spy={true} smooth={true}>
-                Testimonial
+              <Link to="about" activeClass="active" spy={true} smooth={true}>
+                About Me
               </Link>
             </li>
           </ul>
         </div>
-        <Link to="contact" spy={true} smooth={true}>
+        <Link to="contact" activeClass="active" spy={true} smooth={true}>
           <button className="button n-button">Contact</button>
         </Link>
       </div>

@@ -1,12 +1,8 @@
-import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
-import Intro from "./components/Intro/Intro";
-import Services from "./components/Services/Services";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 import { useContext } from "react";
 import { themeContext } from "./Context";
+import { RouterProvider } from "react-router-dom";
+import Route from "./Routes/Route";
 function App() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -18,12 +14,7 @@ function App() {
         color: darkMode ? "white" : "",
       }}
     >
-      <Navbar />
-      <Intro />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <RouterProvider router={Route}></RouterProvider>
     </div>
   );
 }

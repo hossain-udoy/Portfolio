@@ -2,6 +2,7 @@
   display: flex;
   height: 77vh;
   margin-top: 6rem;
+  margin-bottom: 10rem;
 }
 
 /* left side styling */
@@ -34,7 +35,7 @@
   margin-top: 10px;
 }
 .i-button {
-  width: 8rem;
+  width: 14rem;
   height: 3rem;
 }
 .i-icons {

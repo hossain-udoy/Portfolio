@@ -6,12 +6,11 @@ import boy from "../../img/boy.png";
 import glassesimoji from "../../img/glassesimoji.png";
 import crown from "../../img/crown.png";
 import FloatinDiv from "../FloatingDiv/FloatingDiv";
-import Github from "../../img/github.png";
-import LinkedIn from "../../img/linkedin.png";
-import Instagram from "../../img/instagram.png";
+import { BsGithub, BsLinkedin, BsFacebook } from "react-icons/bs";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import Resume from "../Services/resume.pdf";
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -21,7 +20,7 @@ const Intro = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <div className="Intro" id="Intro">
+    <div className="Intro">
       {/* left name side */}
       <div className="i-left">
         <div className="i-name">
@@ -33,13 +32,33 @@ const Intro = () => {
             and development, producting the Quality work
           </span>
         </div>
-        <Link to="contact" smooth={true} spy={true}></Link>
-        <button className="button i-button">Hire me</button>
+        {/* <Link to="contact" smooth={true} spy={true}></Link> */}
+        <a href={Resume} download>
+          <button className="button i-button">Download My Resume</button>
+        </a>
         {/* social icons */}
-        <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+        <div className="i-icons text-7xl text-amber-400">
+          <a
+            href="https://github.com/hossain-udoy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsGithub></BsGithub>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/md-awalad-hossain-udoy/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsLinkedin></BsLinkedin>
+          </a>
+          <a
+            href="https://www.facebook.com/hossain.udoy/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsFacebook></BsFacebook>
+          </a>
         </div>
       </div>
       {/* right image side */}
